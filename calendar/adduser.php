@@ -2,7 +2,8 @@
 if(!empty($_POST['pseudo']))
 {
 // D'abord, je me connecte à la base de données.
-$bdd = new PDO('mysql:host=localhost;dbname=eCalendar_French;charset=utf8', 'root', 'root');
+mysql_connect("localhost:8888", "root", "root");
+mysql_select_db("eCalendar_French");
 
 // Je mets aussi certaines sécurités ici…
 $passe = mysql_real_escape_string(htmlspecialchars($_POST['passe']));
