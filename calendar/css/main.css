@@ -1,0 +1,306 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url('../fonts/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff') format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url('../fonts/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url('../fonts/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff') format('woff');
+}
+
+* {
+	-webkit-transition: all .2s, background-position none;
+	   -moz-transition: all .2s, background-position none;
+		 -o-transition: all .2s, background-position none;
+		-ms-transition: all .2s, background-position none;
+			transition: all .2s, background-position none;
+}
+
+body {
+	font-family: 'Open Sans';
+	background: #f6f6f6;
+   -webkit-user-select: none;  /* Chrome all / Safari all */
+  	  -moz-user-select: none;  /* Firefox all */
+	   -ms-user-select: none;  /* IE 10+ */
+}
+
+a:focus { color: none; text-decoration: none; }
+button:focus { outline: none !important; }
+
+.table { width: auto; background: transparent; margin: 40px auto; }
+.table-bordered { border: solid 1px #CCC; border-left: 0px; }
+.table-bordered th, .table-bordered td { border-top: solid 1px #CCC; border-left: solid 1px #CCC; }
+
+.table thead tr:first-child {
+	background-image: linear-gradient(to bottom,#fff,#EEEEEE);
+	background-color: #E4E4E4;
+	background-image: -moz-linear-gradient(top,#fff,#e6e6e6);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e6e6e6));
+	background-image: -webkit-linear-gradient(top,#fff,#e6e6e6);
+	background-image: -o-linear-gradient(top,#fff,#e6e6e6);
+	background-image: linear-gradient(to bottom,#fff,#e6e6e6);
+}
+
+.table-bordered thead:first-child tr:first-child>th:first-child {
+	-webkit-border-top-left-radius: 4px;
+	border-top-left-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+}
+.table-bordered thead:first-child tr:first-child>th:last-child {
+	-webkit-border-top-right-radius: 4px;
+	border-top-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+}
+
+.table thead th { font-weight: 400; }
+.table>thead>tr>th { padding: 10px 0px; border-bottom-width: 0px; border: solid 1px #CCC; }
+.table>tbody>tr>td { padding: 0px; }
+.table thead tr:after { background-image: linear-gradient(to bottom,#F5F5F5,#E6E6E6); }
+.table tbody td { padding: 0px; font-size: 40px; color: rgb(82, 82, 82); font-weight: bold; border: solid 1px #CCC !important; background: #FFF; }
+.table tbody td:hover { background: #D7F2FF; cursor: pointer; }
+.actual { color: #08c !important; }
+.active { background: #D2EDFA !important; }
+.non-active { border: inherit; }
+.table tr.success, td.success { background-color:#dff0d8 }
+.table tr.error, td.error { background-color:#f2dede }
+.table tr.warning, td.warning { background-color:#fcf8e3 }
+.table tr.info, td.info { background-color:#d9edf7 }
+
+.table th, .table td { 
+	text-align: center;
+	padding: 10px 0px;
+	width: 120px !important;
+}
+
+.table td.blank:hover { cursor: default; }
+
+h1, h2, h3,
+h4, h5, h6 {
+	font-weight: 400;
+}
+
+.modal { position: absolute; }
+.modal-open { overflow: auto; }
+
+div.loading {
+	background: #426FFF;
+	color: #FFF;
+	font-size: 12px;
+	border-radius: 110px;
+	top: 0;
+	margin: 0.8%;
+	padding: 7px 20px;
+	position: absolute;
+	display: none;
+}
+
+a.prev, a.next {
+	width: 40px;
+	height: 40px;
+	float: left;
+	background: url(../img/arrows.png) no-repeat;
+}
+
+a.prev {
+	border-right: 1px solid rgba(0,0,0,0.15);
+}
+
+a.next {
+	float: right;
+	border-left: 1px solid rgba(0,0,0,0.15);
+	background-position: -40px 0;
+}
+
+a.prev:hover { background-position: 0px -40px; }
+a.next:hover { background-position: -40px -40px; }
+
+a.today { display: block; }
+a.today:hover { color: #08c; }
+
+span#mes { text-transform: uppercase; }
+span#page { line-height: 40px; }
+
+a { color: inherit; text-decoration: none; }
+a:hover { color: inherit; text-decoration: none; }
+
+a.days {
+	padding: 48px 0px;
+	display: block;
+	line-height: 0;
+}
+
+.label {
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 4px 4px 0px 0px;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	float: right;
+}
+
+.modal { overflow-y: auto; }
+.modal .modal-header { height: 50px; padding: 5px 15px; }
+.modal .modal-header>h3 { float: left; margin-top: 7px; }
+.modal .modal-header .add { margin: 3px 0px 1px 13px; }
+.modal .modal-header .close { padding: 6px 7px; font-size: 30px; }
+
+.modal .modal-body { padding: 15px 0px; }
+
+.modal .modal-body>div {
+	background: #EEE;
+	margin: 8px 0px;
+	border-left: solid 4px #B61111;
+	padding: 5px 20px;
+	border-top: solid 1px #DDD;
+	border-bottom: solid 1px #DDD;
+}
+
+.modal .modal-body>span.loading {
+	margin: 180px 0px;
+	display: block;
+	text-align: center;
+}
+
+.modal .modal-body>div>span.title {
+	display: inline-block;
+}
+
+.modal .modal-body>div>span.time {
+	float: right;
+	line-height: 70px;
+}
+
+.modal .modal-body>div>span.time .icon-time { margin-top: 3px; }
+
+.modal .modal-body>span.not-found {
+	font-style: italic;
+	text-align: center;
+	display: block;
+	padding: 40px 0px;
+}
+
+.modal .modal-footer {
+	height: 40px;
+	padding: 0px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 400;
+	background-color: #f5f5f5;
+	border-top: 1px solid #ddd;
+	-webkit-border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	border-radius: 0 0 6px 6px;
+	margin-top: 0px;
+}
+
+.modal .modal-footer.addEvent {
+	height: auto;
+	padding: 10px;
+}
+
+.control-panel {
+	right: 0px;
+	margin: 8px 8px 0px 0px;
+	position: absolute;
+}
+
+/* ADD EVENT */
+	/* UI DatePicker */
+
+	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { text-align: center; }
+	.ui-slider-handle.ui-state-default.ui-corner-all {
+		width: 5px;
+		height: 20px;
+		display: block;
+		position: relative;
+	}
+
+	/* UI TimePicker */
+
+	.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all { padding: 0px; border-radius: 0px !important; font-family: 'Open Sans'; }
+	.ui-widget-header.ui-helper-clearfix.ui-corner-all { border-radius: 0px; border: none; }
+	.ui-timepicker-div>dl { margin: 10px 14px; }
+	.ui-timepicker-div>dl>dt { font-size: 13px; }
+	.ui_tpicker_hour_label .ui_tpicker_minute_label { margin-bottom: -21px; }
+	.ui-datepicker .ui-datepicker-buttonpane>button { margin-bottom: 3px !important; }
+	.ui-datepicker-buttonpane.ui-widget-content { border-top: none;}
+	.ui-slider-handle.ui-state-default.ui-corner-all { background: #EEE; border-radius: 0px; }
+	button.done { width: 100% !important; margin-right: 0px !important; }
+	button.ui-state-hover {
+		color: #fff !important;
+		background-color: #04c !important;
+		background-image: none !important;
+		text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+		border-color: #04c #04c #002a80 !important;
+	}
+	/*****************/
+
+	button#add { width: 100%; padding: 10px 0px; }
+/*************/
+
+@media (min-width: 960px) {
+	tbody>td { font-size: 40px; }
+	tbody>td>a.days { padding: 38px 0px; }
+}
+
+@media (max-width: 959px) {
+	tbody>td { font-size: 40px; }
+	tbody>td>a.days { padding: 38px 0px; }
+	.table { margin: 0px auto; }
+	.table thead * { font-weight: 200; }
+	.control-panel { margin: 0px auto; position: inherit; width: 720px; }
+	.control-panel>a { width: 100%; padding: 2px 12px; }
+}
+
+@media (max-width: 781px) {
+	.container { width: 100%; padding: 0px; }
+	.table { margin: 0px auto; }
+
+	.table-bordered thead:first-child tr:first-child>th:first-child { border-top-left-radius: 0px; }
+	.table-bordered thead:first-child tr:first-child>th:last-child { border-top-right-radius: 0px; }
+
+	.table-bordered tr.weekdays.info { font-size: 12px; }
+
+	.control-panel { width: 600px; }
+	.control-panel>a { border-radius: 0px; }
+	.demo { display: none; }
+}
+
+@media (max-width: 599px) {
+	a.days { padding: 38px 0px; font-size: 34px; }
+	.label { font-size: 11px; margin: 2px 2px 0px 0px; }
+	.modal-dialog { margin: 0px; }
+	.modal-content { border-radius: 0px; }
+	.modal .modal-body>div { margin: 4px 0px; padding: 0px 20px; }
+	.modal .modal-body>div>span.title>h4 { font-size: 16px; }
+	.modal .modal-body>div>span.title>p { font-size: 12px; }
+	.modal .modal-body>div>span.time { line-height: 65px; }
+	.modal .modal-body>div>span.time>span { width: 70px !important; font-size: 12px; }
+	.control-panel { width: 385px; }
+	.table-bordered tr.weekdays.info { font-size: 10px; }
+}
+
+@media (max-width: 384px) { /* <= Samsung S4/iPhone5/etc */
+	tbody>td { font-size: 40px; }
+	a.days { padding: 25px 0px; font-size: 20px; }
+	.label { font-size: 6px; margin: 2px 2px 0px 0px; }
+	.modal .modal-header { height: 40px; padding: 0px 15px; }
+	.modal .modal-header>h3 { font-size: 20px; }
+	.modal .modal-header .add { font-size: 10px; margin-top: 5.5px; }
+	.modal .modal-body>div>span.title>h4 { font-size: 12px; margin: 5px 0px 2px 0px; }
+	.modal .modal-body>div>span.title>p { font-size: 8px; margin-bottom: 5px; }
+	.modal .modal-body>div>span.time { line-height: 37px; }
+	.modal .modal-body>div>span.time>span { width: 56px !important; font-size: 10px; }
+	.modal .modal-body>div>span.time>span>span.glyphicon { top: 1.5px; }
+	.control-panel { width: 200px; }
+	.table-bordered tr.weekdays.info { font-size: 8px; }
+}
