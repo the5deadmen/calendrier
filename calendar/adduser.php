@@ -1,10 +1,15 @@
 <?php
 if(!empty($_POST['pseudo']))
 {
-// D'abord, je me connecte à la base de données.
-mysql_connect("localhost:8888", "root", "root");
-mysql_select_db("eCalendar_French");
-
+try
+{
+	$bdd = new PDO('mysql:host=localhost;dbname=ecalendar;charset=utf8', 'root', 'root');
+}
+catch (Exception $e)
+{
+        die('Erreur : ' . $e->getMessage());
+}
+	
 // Je mets aussi certaines sécurités ici…
 $passe = mysql_real_escape_string(htmlspecialchars($_POST['passe']));
 $passe2 = mysql_real_escape_string(htmlspecialchars($_POST['passe2']));
@@ -29,17 +34,18 @@ echo 'Les deux mots de passe que vous avez rentrés ne correspondent pas…';
         <title>eCalendar - S'identifier</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
-        <!-- Bootstrap style -->
+         <!-- Bootstrap style -->
             <link href="../calendar/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <!-- Main style -->
             <link rel="StyleSheet" href="../calendar/css/main_box.css" type="text/css" />
+		 
     </head>
 	<body>
 		 <div class="container">
           	<div class="box">
 <section id="enter">
 <br>
-	<img class="center-block logo wow bounceIn" src="../calendar/img/logo.png" width="190px" height="190px" alt="logo">
+	<img class="center-block" src="../calendar/img/logo.png" width="190px" height="190px" alt="logo">
 <form method="POST">
 <label>Pseudo: <input type="text" name="pseudo"/></label><br/>
 <label>Mot de passe: <input type="password" name="passe"/></label><br/>
