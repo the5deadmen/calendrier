@@ -85,11 +85,13 @@ if (isset($pseudo,$pass))
           if (!session_id()) session_start();
           $_SESSION['login'] = $pseudo;
           
+			 header("Location: ../ecalendar/connection.php");
+            exit(); 
           /* A MODIFIER Remplacer le '#' par l'adresse de votre page de destination, sinon ce lien indique la page actuelle.*/
           $message = 'Votre inscription est enregistrée.';
           /*ou redirection vers une page en cas de succès ex : menu.php*/
-          /*header("Location: menu.php");
-            exit();  */
+         
+			
         }   
       }
       else
